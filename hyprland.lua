@@ -384,12 +384,12 @@ hl.window_rule({
 })
 hl.window_rule({
 	name = "dolphin",
-	match = { class = "dolphin" },
+	match = { class = "Happ" },
 	workspace = 2,
 })
 hl.window_rule({
 	name = "keepassxc",
-	match = { class = "keepassxc" },
+	match = { class = "org.keepassxc.KeePassXC" },
 	workspace = 3,
 })
 hl.window_rule({
@@ -399,6 +399,11 @@ hl.window_rule({
 })
 hl.window_rule({
 	name = "obsidian",
-	match = { class = "obsidian" },
+	match = { class = "md.obsidian.Obsidian" },
 	workspace = 5,
+})
+hl.window_rule({
+	name = "Dolphin",
+	match = { class = "org.kde.dolphin" },
+	workspace = 6,
 })
