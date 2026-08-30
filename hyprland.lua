@@ -16,7 +16,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
 	output = "",
-	mode = "preferred",
+	mode = "1920x1080@100.00Hz",
 	position = "auto",
 	scale = "1",
 })
@@ -156,7 +156,7 @@ hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQu
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "easeOutQuint", style = "slide" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
 -- hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "almostLinear", style = "fade" })
 -- hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
@@ -254,14 +254,14 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --freeze -s -o /home/timur/screenshots"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --freeze -s -o /home/batya/screenshots"))
 hl.bind(
 	mainMod .. " + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("CTRL + SPACE", hl.dsp.exec_cmd("/home/timur/.config/rofi/scripts/launcher_t2"))
+hl.bind("CTRL + SPACE", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("/home/timur/.config/rofi/scripts/powermenu_t2"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
