@@ -46,6 +46,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("keepassxc")
+	hl.exec_cmd("wpaperd -c ~/wpaperd/target/release/config.toml -d")
 	hl.exec_cmd("asusctl aura effect static --colour 00ff00")
 end)
 
