@@ -40,13 +40,16 @@ local fileManager = "dolphin"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
+	hl.exec_cmd(fileManager)
 	hl.exec_cmd("firefox")
-	hl.exec_cmd("happ")
+    -- old autoboot of vpn
+	-- hl.exec_cmd("happ")
 	hl.exec_cmd("obsidian")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("keepassxc")
-	hl.exec_cmd("wpaperd -c ~/wpaperd/target/release/config.toml -d")
+	hl.exec_cmd("/home/batya/wpaperd/target/release/wpaperd -c /home/batya/wpaperd/target/release/config.toml -d")
+    -- old autoboot of asus on laptop
 	hl.exec_cmd("asusctl aura effect static --colour 00ff00")
 end)
 
