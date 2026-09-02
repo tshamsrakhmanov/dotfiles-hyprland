@@ -60,11 +60,13 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XDG_MENU_PREFIX", "arch-")
-hl.env("HYPRCURSOR_SIZE", "34")
 
+hl.env("HYPRCURSOR_SIZE", "34")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "Default")
+
+hl.env("QT_QPA_PLATFORMTHEME","qt6ct")
 
 ----- PERMISSIONS -----
 -----------------------
@@ -277,10 +279,10 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -- closeWindowBind:set_enabled(false)
 
 -- Move focus with mainMod + arrow keys
--- hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
--- hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
--- hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
--- hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
