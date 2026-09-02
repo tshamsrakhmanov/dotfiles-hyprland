@@ -252,6 +252,11 @@ hl.device({
 	sensitivity = -0.5,
 })
 
+cursor = {
+    inactive_timeout = 2,      -- Hides after 2 seconds of inactivity. Set to 0 to disable.
+    hide_on_key_press = true,  -- Hides the cursor when a key is pressed.
+}
+
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
