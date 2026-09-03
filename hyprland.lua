@@ -273,8 +273,8 @@ hl.bind(
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("CTRL + SPACE", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
+hl.bind("CTRL + SHIFT + right", hl.dsp.exec_cmd("/home/batya/wpaperd/target/release/wpaperctl next"))
 hl.bind("CTRL + SHIFT + SPACE", hl.dsp.exec_cmd("rofi -show run"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("/home/timur/.config/rofi/scripts/powermenu_t2"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
