@@ -231,6 +231,9 @@ hl.config({
 
 		follow_mouse = 1,
 
+        repeat_rate = 60,
+        repeat_delay = 300,
+
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
 		touchpad = {
