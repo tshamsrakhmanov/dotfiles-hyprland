@@ -42,14 +42,14 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(fileManager)
 	hl.exec_cmd("firefox")
-    -- old autoboot of vpn
+	-- old autoboot of vpn
 	-- hl.exec_cmd("happ")
 	hl.exec_cmd("obsidian")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("keepassxc")
 	hl.exec_cmd("/home/batya/wpaperd/target/release/wpaperd -c /home/batya/wpaperd/target/release/config.toml -d")
-    -- old autoboot of asus on laptop
+	-- old autoboot of asus on laptop
 	hl.exec_cmd("asusctl aura effect static --colour 00ff00")
 end)
 
@@ -66,7 +66,7 @@ hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "Default")
 
-hl.env("QT_QPA_PLATFORMTHEME","qt6ct")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 ----- PERMISSIONS -----
 -----------------------
@@ -231,8 +231,8 @@ hl.config({
 
 		follow_mouse = 1,
 
-        repeat_rate = 60,
-        repeat_delay = 300,
+		repeat_rate = 60,
+		repeat_delay = 300,
 
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
@@ -256,8 +256,8 @@ hl.device({
 })
 
 cursor = {
-    inactive_timeout = 2,      -- Hides after 2 seconds of inactivity. Set to 0 to disable.
-    hide_on_key_press = true,  -- Hides the cursor when a key is pressed.
+	inactive_timeout = 2, -- Hides after 2 seconds of inactivity. Set to 0 to disable.
+	hide_on_key_press = true, -- Hides the cursor when a key is pressed.
 }
 
 ---------------------
