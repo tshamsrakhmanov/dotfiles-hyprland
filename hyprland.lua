@@ -48,7 +48,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("keepassxc")
-	hl.exec_cmd("/home/batya/wpaperd/target/release/wpaperd -c /home/batya/wpaperd/target/release/config.toml -d")
+	hl.exec_cmd("wpaperd -c /home/batya/config.toml -d")
 	-- old autoboot of asus on laptop
 	hl.exec_cmd("asusctl aura effect static --colour 00ff00")
 end)
@@ -67,6 +67,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "Default")
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("PATH", os.getenv("HOME") .. "/.cargo/bin:" .. os.getenv("PATH"))
 
 ----- PERMISSIONS -----
 -----------------------
@@ -276,7 +277,7 @@ hl.bind(
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("CTRL + SPACE", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
-hl.bind("CTRL + SHIFT + right", hl.dsp.exec_cmd("/home/batya/wpaperd/target/release/wpaperctl next"))
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.exec_cmd("wpaperctl next"))
 hl.bind("CTRL + SHIFT + SPACE", hl.dsp.exec_cmd("rofi -show run"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
