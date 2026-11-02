@@ -41,14 +41,9 @@ local fileManager = "dolphin"
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(fileManager)
-	hl.exec_cmd("firefox")
-	-- old autoboot of vpn
-	-- hl.exec_cmd("happ")
-	hl.exec_cmd("obsidian")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
-	hl.exec_cmd("keepassxc")
-	hl.exec_cmd("wpaperd -c /home/batya/config.toml -d")
+	hl.exec_cmd("wpaperd")
 	-- old autoboot of asus on laptop
 	hl.exec_cmd("asusctl aura effect static --colour 00ff00")
 end)
@@ -267,7 +262,6 @@ cursor = {
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --freeze -s -o /home/batya/screenshots"))
 hl.bind(
