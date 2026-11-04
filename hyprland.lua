@@ -27,7 +27,6 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "dolphin"
 
 -------------------
 ---- AUTOSTART ----
@@ -40,7 +39,6 @@ local fileManager = "dolphin"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
-	hl.exec_cmd(fileManager)
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("wpaperd")
@@ -268,7 +266,7 @@ hl.bind(
 	mainMod .. " + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("dolphin"))
 hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("CTRL + SPACE", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
 hl.bind(mainMod .. " + CTRL + right", hl.dsp.exec_cmd("wpaperctl next"))
